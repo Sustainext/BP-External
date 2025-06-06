@@ -18,9 +18,9 @@ exports.handler = async (event) => {
     }
 
     // === Microsoft credentials ===
-    const appId = "ef1b8fd5-8e2d-4c65-9694-3d7c3e874b37";
-    const clientSecret = "I4V8Q~X623nP6PrUE_Z_mZFFNGP2CVAkKGu8bbAO";
-    const tenantId = "b0f8e84c-e4a8-4799-81b0-df150064037d";
+    const appId = process.env.APP_ID;
+    const clientSecret = process.env.CLIENT_SECRET;
+    const tenantId = process.env.TENANT_ID;
     const sender = "hello@sustainext.ai";
 
     const cca = new ConfidentialClientApplication({
